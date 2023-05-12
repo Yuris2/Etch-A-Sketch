@@ -8,3 +8,10 @@ for (let i = 0; i < 16*16; i++ ) {
     })
     gridContainer.appendChild(grid)
 }
+
+function cleared() {
+    const cells = document.querySelectorAll(".canvas");
+    cells.forEach(function(cell) {
+        cell.style.backgroundColor = "#ccc";
+    });
+}
