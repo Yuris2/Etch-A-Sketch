@@ -2,17 +2,19 @@ body {
 
 }
 #grid-container {
+    margin:auto; /*aligns grid horizontally */
+    padding: 15%; /*aligns grid vertically*/
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
+    max-width: 520px;
+    max-height: 500px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-wrap:wrap;
 }
 .canvas {
-    flex-basis: calc(25% - 20px);
-    margin: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 15px;
     background-color: #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
+    border: 1px solid black;
 }
