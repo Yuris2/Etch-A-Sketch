@@ -2,18 +2,13 @@ body {
 
 }
 #grid-container {
-    margin:auto; /*aligns grid horizontally */
-    padding: 15%; /*aligns grid vertically*/
-    display: flex;
-    max-width: 520px;
-    max-height: 500px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-wrap:wrap;
+    max-width: min-content ;
+    max-height: min-content;
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+
 }
 .canvas {
-    flex-grow: 0;
-    flex-shrink: 0;
     padding: 15px;
     background-color: #ccc;
     border: 1px solid black;
