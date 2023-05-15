@@ -5,7 +5,6 @@ body {
     max-width: min-content ;
     max-height: min-content;
     display: grid;
-    grid-template-columns: repeat(16,1fr);
 
 }
 .canvas {
