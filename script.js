@@ -1,10 +1,3 @@
-const slider = document.getElementById("boardAdjuster")
-const currentBoardValue = document.getElementById("sizeOfBoard");
-currentBoardValue.innerHTML = "Size Of Board: "+slider.value+"x"+slider.value; //Displays Default Value
-
-slider.oninput = function () { 
-    currentBoardValue.innerHTML = "Size Of Board: "+slider.value+"x"+slider.value; //Changes HTML to display board dimensions
-}
 function createBoard (size) {
     const gridContainer = document.getElementById("grid-container")
     gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`
@@ -31,15 +24,16 @@ function cleared() {
         //In the query canvas, select each cell and sets its background color to the original color
     });
 }
+createBoard(16); //Default Board
+const slider = document.getElementById("boardAdjuster")
+const currentBoardValue = document.getElementById("sizeOfBoard");
+currentBoardValue.innerHTML = "Size Of Board: "+slider.value+"x"+slider.value; //Displays Default Value
 
-const userInput = (dimensions) => {
-    if (dimensions > 1 && dimensions <= 100) {
-        createBoard(dimensions);
-    } else {
-        console.log("Board size is out of range")
-    }
+slider.oninput = function () { 
+    currentBoardValue.innerHTML = "Size Of Board: "+slider.value+"x"+slider.value; //Changes HTML to display board dimensions
+    createBoard(slider.value);
 }
-createBoard(16);
+
 
 //Next Steps
 //adjustable grid EX: shrinks to grows size of grid
