@@ -2,16 +2,13 @@ body {
 
 }
 #grid-container {
-    width: 600px;
-    height: 600px;
     display: grid;
 
 
 }
 .canvas {
-    padding: 10px;
+    padding: 2px;
     background-color: #ccc;
-    border: 1px solid black;
 }
 
 

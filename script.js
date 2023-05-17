@@ -2,7 +2,8 @@ function createBoard (size) {
     const gridContainer = document.getElementById("grid-container")
     gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`
     gridContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`
-
+    gridContainer.style.width = `600px`;
+    gridContainer.style.height = `600px`;
     gridContainer.innerHTML = "";
 
     let sizeOfBoard = size * size; //Amount of Squares
@@ -24,7 +25,7 @@ function cleared() {
     });
 }
 
-createBoard(27);
+createBoard(100);
 
 //Next Steps
 //adjustable grid EX: shrinks to grows size of grid
