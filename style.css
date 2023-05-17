@@ -2,13 +2,16 @@ body {
 
 }
 #grid-container {
-    max-width: min-content ;
-    max-height: min-content;
+    width: 600px;
+    height: 600px;
     display: grid;
+
 
 }
 .canvas {
-    padding: 15px;
+    padding: 10px;
     background-color: #ccc;
     border: 1px solid black;
 }
+
+
