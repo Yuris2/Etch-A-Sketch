@@ -1,3 +1,10 @@
+const slider = document.getElementById("boardAdjuster")
+const currentBoardValue = document.getElementById("sizeOfBoard");
+currentBoardValue.innerHTML = "Size Of Board: "+slider.value+"x"+slider.value; //Displays Default Value
+
+slider.oninput = function () { 
+    currentBoardValue.innerHTML = "Size Of Board: "+slider.value+"x"+slider.value; //Changes HTML to display board dimensions
+}
 function createBoard (size) {
     const gridContainer = document.getElementById("grid-container")
     gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`
