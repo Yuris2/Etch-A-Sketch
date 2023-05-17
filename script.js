@@ -25,7 +25,14 @@ function cleared() {
     });
 }
 
-createBoard(100);
+const userInput = (dimensions) => {
+    if (dimensions > 1 && dimensions <= 100) {
+        createBoard(dimensions);
+    } else {
+        console.log("Board size is out of range")
+    }
+}
+createBoard(16);
 
 //Next Steps
 //adjustable grid EX: shrinks to grows size of grid
