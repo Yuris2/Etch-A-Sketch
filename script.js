@@ -24,7 +24,8 @@ function createBoard (size) {
             if (isColored == false) {
                 grid.style.backgroundColor = "black";
             } else if (isColored == true) {
-                grid.style.backgroundColor = "blue"
+                let randomColor = Math.floor(Math.random()*16777215).toString(16);
+                grid.style.backgroundColor = "#"+randomColor
             }
             
         })
@@ -39,6 +40,22 @@ function cleared() {
         //In the query canvas, select each cell and sets its background color to the original color
     });
 }
+
+const grid = () => {
+    let checkBox = document.getElementById("gridSelector")
+    const cells = document.querySelectorAll(".canvas")
+
+    if (checkBox.checked == true) {
+        cells.forEach(function(cell) {
+            cell.style.border = "1px solid #00000046";
+        })
+    } else {
+        cells.forEach(function(cell) {
+            cell.style.border = ""
+        })
+    }
+}
+
 createBoard(16); //Default Board
 const slider = document.getElementById("boardAdjuster")
 const currentBoardValue = document.getElementById("sizeOfBoard");
