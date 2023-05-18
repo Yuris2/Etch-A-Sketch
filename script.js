@@ -1,3 +1,13 @@
+let isColored = false;
+
+function changeColor(color) {
+    if (color == true) {
+        isColored = true;
+    } else if (color == false) {
+        isColored = false;
+    }
+}
+
 function createBoard (size) {
     const gridContainer = document.getElementById("grid-container")
     gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`
@@ -11,7 +21,12 @@ function createBoard (size) {
         const grid = document.createElement("div");
         grid.classList.add("canvas");
         grid.addEventListener("mouseover", function () {
-            grid.style.backgroundColor = "black";
+            if (isColored == false) {
+                grid.style.backgroundColor = "black";
+            } else if (isColored == true) {
+                grid.style.backgroundColor = "blue"
+            }
+            
         })
         gridContainer.appendChild(grid)
 }
@@ -36,5 +51,5 @@ slider.oninput = function () {
 
 
 //Next Steps
-//adjustable grid EX: shrinks to grows size of grid
-//I guess I have to study CSS Variables in order to make it easier
+//Style the Etch-a-Sketch to make it more presentable and maybe add color
+//Maybe add more functionality
