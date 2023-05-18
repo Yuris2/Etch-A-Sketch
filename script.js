@@ -69,5 +69,4 @@ slider.oninput = function () {
 
 
 //Next Steps
-//Style the Etch-a-Sketch to make it more presentable and maybe add color
-//Maybe add more functionality
+//Styling
