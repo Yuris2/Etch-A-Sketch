@@ -64,6 +64,7 @@ currentBoardValue.innerHTML = "Size Of Board: "+slider.value+"x"+slider.value; /
 slider.oninput = function () { 
     currentBoardValue.innerHTML = "Size Of Board: "+slider.value+"x"+slider.value; //Changes HTML to display board dimensions
     createBoard(slider.value);
+    grid()
 }
 
 
