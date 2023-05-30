@@ -10,13 +10,17 @@
 <body>
 <h1 class="title">Etch-A-Sketch</h1>
 <h2 id ="subtitle">By Yuri Batan</h2>
+<div class="container">
 <div id="grid-container"></div>
-<button  id = "resetButton" onclick = "cleared()">Clear Board</button>
-<button id = "blackPen" onclick = "changeColor(false)">Black</button>
-<button id = "randomColor" onclick = "changeColor(true)">Random Color</button>
-<input type = "checkbox" id = "gridSelector" onclick = "grid()">Grids</input>
-<div id="sizeOfBoard">Size of Board</div>
-<input type = "range" min = "1" max = "100" value = "16" id = "boardAdjuster">
+</div>
+<div class="container" id = "button-container">
+    <button  id = "resetButton" onclick = "cleared()">Clear Board</button>
+    <button id = "blackPen" onclick = "changeColor(false)">Black</button>
+    <button id = "randomColor" onclick = "changeColor(true)">Random Color</button>
+    <input type = "checkbox" id = "gridSelector" onclick = "grid()">Grids</input>
+    <div id="sizeOfBoard">Size of Board</div>
+    <input type = "range" min = "1" max = "100" value = "16" id = "boardAdjuster">
+    </div>
 <script src="script.js"></script>
  </div>   
 </body>

@@ -1,10 +1,17 @@
 body {
 
 }
+.container {
+    display: flex;
+    justify-content: center;
+}
+#button-container.container {
+    justify-content: center;
+    gap:10px
+}
+
 #grid-container {
     display: grid;
-
-
 }
 .canvas {
     padding: 2px;
