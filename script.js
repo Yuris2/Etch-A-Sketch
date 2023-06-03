@@ -1,10 +1,13 @@
 let isColored = false;
+let isErasing = false;
 
-function changeColor(color) {
-    if (color == true) {
+function changeColor(color, erase) {
+    if (color == true && erase == false) {
         isColored = true;
-    } else if (color == false) {
+    } else if (color == false && erase == false) {
         isColored = false;
+    } else if (color == false && erase == true) {
+        isErasing = true;
     }
 }
 
@@ -59,10 +62,10 @@ const grid = () => {
 createBoard(16); //Default Board
 const slider = document.getElementById("boardAdjuster")
 const currentBoardValue = document.getElementById("sizeOfBoard");
-currentBoardValue.innerHTML = "Size Of Board: "+slider.value+"x"+slider.value; //Displays Default Value
+currentBoardValue.innerHTML = slider.value+"x"+slider.value; //Displays Default Value
 
 slider.oninput = function () { 
-    currentBoardValue.innerHTML = "Size Of Board: "+slider.value+"x"+slider.value; //Changes HTML to display board dimensions
+    currentBoardValue.innerHTML = slider.value+"x"+slider.value; //Changes HTML to display board dimensions
     createBoard(slider.value);
     grid()
 }
