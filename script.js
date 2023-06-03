@@ -4,8 +4,10 @@ let isErasing = false;
 function changeColor(color, erase) {
     if (color == true && erase == false) {
         isColored = true;
+        isErasing = false;
     } else if (color == false && erase == false) {
         isColored = false;
+        isErasing = false;
     } else if (color == false && erase == true) {
         isErasing = true;
     }
@@ -24,11 +26,13 @@ function createBoard (size) {
         const grid = document.createElement("div");
         grid.classList.add("canvas");
         grid.addEventListener("mouseover", function () {
-            if (isColored == false) {
+            if (isColored == false && isErasing == false) {
                 grid.style.backgroundColor = "black";
-            } else if (isColored == true) {
+            } else if (isColored == true && isErasing == false) {
                 let randomColor = Math.floor(Math.random()*16777215).toString(16);
                 grid.style.backgroundColor = "#"+randomColor
+            } else if (isErasing == true) {
+                grid.style.backgroundColor = "#ccc"
             }
             
         })
