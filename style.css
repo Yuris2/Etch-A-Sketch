@@ -22,7 +22,28 @@
     gap:10px
 }
 .board-buttons {
+    background-color: #b8212b;
     font-family:sidefont;
+    font-size: 12px;
+    text-align: center;
+    color:#dfebf2 ;
+    padding: 10px 20px;
+    border: 1px solid;
+    transition-duration: 0.5s;
+}
+
+#blackPen.board-buttons:hover {
+    background-color: #dfebf2;
+    color:black;
+    border: 1px solid black;
+
+}
+
+.board-buttons:hover {
+    background-color: #dfebf2;
+    color:#b8212b;
+    border: 1px solid #b8212b;
+
 }
 #grid-container {
     display: grid;
