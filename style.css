@@ -11,15 +11,14 @@
     text-align: center;
 }
 .title {
-    font-family:;
+    font-family:space-bold;
 }
 .container {
     display: flex;
     justify-content: center;
 }
 #button-container.container {
-    justify-content: space-around;
-    gap:10px
+    gap:70px
 }
 .board-buttons {
     background-color: #b8212b;
