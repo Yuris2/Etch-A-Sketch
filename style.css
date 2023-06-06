@@ -47,6 +47,7 @@
 }
 #grid-container {
     display: grid;
+    border: 20px solid #b8212b;
 }
 .canvas {
     padding: 2px;
