@@ -1,5 +1,17 @@
+@font-face {
+    font-family:space-bold;
+    src: url(fonts/SpaceGrotesk-Bold.ttf);
+}
+@font-face {
+    font-family:sidefont;
+    src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
 .title-container {
     text-align: center;
+}
+.title {
+    font-family:;
 }
 .container {
     display: flex;
@@ -10,7 +22,7 @@
     gap:10px
 }
 .board-buttons {
-    background-color: #f44336;
+    font-family:sidefont;
 }
 #grid-container {
     display: grid;
