@@ -18,7 +18,7 @@
     justify-content: center;
 }
 #button-container.container {
-    justify-content: center;
+    justify-content: space-around;
     gap:10px
 }
 .board-buttons {
