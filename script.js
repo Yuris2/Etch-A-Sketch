@@ -1,15 +1,27 @@
 let isColored = false;
 let isErasing = false;
+let isRandom = false;
 
-function changeColor(color, erase) {
-    if (color == true && erase == false) {
+function changeColor(color, erase, random) {
+    if (color == true && erase == false && random == true) {
+        //random color
         isColored = true;
         isErasing = false;
-    } else if (color == false && erase == false) {
+        isRandom = true;
+    } else if (color == false && erase == false && random == false) {
+        //black
         isColored = false;
         isErasing = false;
-    } else if (color == false && erase == true) {
+        isRandom = false;
+    } else if (color == false && erase == true && random == false) {
+        //erase
         isErasing = true;
+        isRandom = false;
+    } else if (color == true && erase == false && random == false) {
+        //specific color
+        isColored = true;
+        isErasing = false;
+        isRandom = false;
     }
 }
 
@@ -28,7 +40,7 @@ function createBoard (size) {
         grid.addEventListener("mouseover", function () {
             if (isColored == false && isErasing == false) {
                 grid.style.backgroundColor = "black";
-            } else if (isColored == true && isErasing == false) {
+            } else if (isColored == true && isErasing == false && isRandom == true) {
                 let randomColor = Math.floor(Math.random()*16777215).toString(16);
                 grid.style.backgroundColor = "#"+randomColor
             } else if (isErasing == true) {
