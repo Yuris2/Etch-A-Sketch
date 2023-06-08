@@ -17,9 +17,13 @@
     display: flex;
     justify-content: center;
 }
-#button-container.container {
-    gap:70px
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 .board-buttons {
     background-color: #b8212b;
     font-family:sidefont;
