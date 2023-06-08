@@ -8,6 +8,7 @@ let specificColor = document.getElementById("colorSelector")
 specificColor.oninput = function() {
     isRandom = false;
     isColored = true;
+    isErasing = false;
     theColor = specificColor.value
 }
 

@@ -79,6 +79,12 @@ body {
     padding: 2px;
     background-color: #ccc;
 }
-.
+
+#gridCheck ,#inputColor, #boardAdjuster{
+    font-family: sidefont;
+    font-size: 15px;
+    color:#2ab7ca
+}
+
 
 
