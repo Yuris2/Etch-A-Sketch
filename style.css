@@ -1,3 +1,7 @@
+/*#fe4a49 • #2ab7ca • #fed766 • #e6e6ea • #f4f4f8*/
+body {
+    background-color:#f4f4f8 ;
+}
 @font-face {
     font-family:space-bold;
     src: url(fonts/SpaceGrotesk-Bold.ttf);
@@ -32,7 +36,7 @@
 }
 
 .board-buttons {
-    background-color: #b8212b;
+    background-color: #2ab7ca;
     font-family:sidefont;
     font-size: 12px;
     text-align: center;
@@ -43,21 +47,33 @@
 }
 
 #blackPen.board-buttons:hover {
-    background-color: #dfebf2;
+    background-color: #f4f4f8;
     color:black;
     border: 1px solid black;
 
 }
 
+#resetButton.board-buttons:hover {
+    background-color:#f4f4f8;
+    color:#fe4a49;
+    border: 1px solid #fe4a49;
+}
+
+#eraser.board-buttons:hover {
+    background-color:#f4f4f8 ;
+    color: #f09cf7;
+    border: 1px solid #f09cf7;
+}
+
 .board-buttons:hover {
     background-color: #dfebf2;
-    color:#b8212b;
-    border: 1px solid #b8212b;
+    color:#2ab7ca;
+    border: 1px solid #2ab7ca;
 
 }
 #grid-container {
     display: grid;
-    border: 5px solid black;
+    border: 5px solid #fe4a49;
 }
 .canvas {
     padding: 2px;
