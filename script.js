@@ -1,7 +1,7 @@
 let isColored = false;
 let isErasing = false;
 let isRandom = false;
-let theColor = ""; //for SpecificColor
+let theColor = ""; //for Specific Color
 
 //color Selector Function
 let specificColor = document.getElementById("colorSelector")
@@ -42,17 +42,20 @@ function createBoard (size) {
         const grid = document.createElement("div");
         grid.classList.add("canvas");
         grid.addEventListener("mouseover", function () {
+            //black Pen
             if (isColored == false && isErasing == false ) {
                 grid.style.backgroundColor = "black";
-            } else if (isColored == true && isErasing == false) {
-                if (isRandom == true) {
+
+            } else if (isColored == true && isErasing == false) { //Color
+                if (isRandom == true) { //Random Color
                  let randomColor = Math.floor(Math.random()*16777215).toString(16);
                  grid.style.backgroundColor = "#"+randomColor
-                } else if (isRandom == false) {
+
+                } else if (isRandom == false) { //Specific Color
                     grid.style.backgroundColor = theColor
                 }
                 
-            }  else if (isErasing == true) {
+            }  else if (isErasing == true) { //Eraser
                 grid.style.backgroundColor = "#ccc"
             }
             
