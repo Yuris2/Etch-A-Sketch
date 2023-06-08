@@ -57,9 +57,7 @@
 }
 #grid-container {
     display: grid;
-    padding-bottom: 70px;
-    background-color: #b8212b;
-    border: 30px solid #b8212b;
+    border: 5px solid black;
 }
 .canvas {
     padding: 2px;
