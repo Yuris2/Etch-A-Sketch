@@ -1,26 +1,29 @@
 let isColored = false;
 let isErasing = false;
 let isRandom = false;
+let theColor = ""; //for SpecificColor
 
-function changeColor(color, erase, random) {
-    if (color == true && erase == false && random == true) {
+//color Selector Function
+let specificColor = document.getElementById("colorSelector")
+specificColor.oninput = function() {
+    isRandom = false;
+    theColor = specificColor.value
+}
+
+function changeColor(color, erase) {
+    if (color == true && erase == false) {
         //random color
         isColored = true;
         isErasing = false;
         isRandom = true;
-    } else if (color == false && erase == false && random == false) {
+    } else if (color == false && erase == false ) {
         //black
         isColored = false;
         isErasing = false;
         isRandom = false;
-    } else if (color == false && erase == true && random == false) {
+    } else if (color == false && erase == true ) {
         //erase
         isErasing = true;
-        isRandom = false;
-    } else if (color == true && erase == false && random == false) {
-        //specific color
-        isColored = true;
-        isErasing = false;
         isRandom = false;
     }
 }
@@ -38,12 +41,17 @@ function createBoard (size) {
         const grid = document.createElement("div");
         grid.classList.add("canvas");
         grid.addEventListener("mouseover", function () {
-            if (isColored == false && isErasing == false) {
+            if (isColored == false && isErasing == false ) {
                 grid.style.backgroundColor = "black";
-            } else if (isColored == true && isErasing == false && isRandom == true) {
-                let randomColor = Math.floor(Math.random()*16777215).toString(16);
-                grid.style.backgroundColor = "#"+randomColor
-            } else if (isErasing == true) {
+            } else if (isColored == true && isErasing == false) {
+                if (isRandom == true) {
+                 let randomColor = Math.floor(Math.random()*16777215).toString(16);
+                 grid.style.backgroundColor = "#"+randomColor
+                } else if (isRandom == false) {
+                    grid.style.backgroundColor = theColor
+                }
+                
+            }  else if (isErasing == true) {
                 grid.style.backgroundColor = "#ccc"
             }
             
