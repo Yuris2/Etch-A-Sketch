@@ -19,9 +19,10 @@
             <input type = "checkbox" id = "gridSelector" onclick = "grid()">Grids</input>
         </div>
         <!--Slider-->
-        <div id="sizeOfBoard"></div>
-        <input type = "range" min = "1" max = "100" value = "16" id = "boardAdjuster">
-
+        <div class="aligner">
+            <div id="sizeOfBoard"></div>
+            <input type = "range" min = "1" max = "100" value = "16" id = "boardAdjuster">
+        </div>
         <!--Reset-->
         <button class = "board-buttons" id = "resetButton" onclick = "cleared()">Clear</button>
         <!--Black-->
@@ -31,9 +32,10 @@
         <!--Eraser-->
         <button class = "board-buttons" id = "eraser" onclick = "changeColor(false, true)">Eraser</button>
         <!--Custom Color-->
-        <div id ="inputColor">Custom Color</div>
-        <input type = "color" id = "colorSelector"> </input>
-    
+        <div class="aligner">
+            <div id ="inputColor">Custom Color</div>
+            <input type = "color" id = "colorSelector"> </input>
+        </div>
     </div>
  <div id="grid-container">
  </div>
